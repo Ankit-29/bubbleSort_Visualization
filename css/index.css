@@ -37,7 +37,7 @@ button:hover {
 }
 
 div {
-  padding: 10px;
+  padding: 2px;
   display: flex;
 }
 
@@ -50,10 +50,10 @@ div {
 
 .col {
   background-color: #66fcf1;
-  min-width: 10px;
+  width: 1px;
   min-height: 1px;
   color:#1f2833;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 

@@ -3,15 +3,17 @@ function show(arr) {
     visualDiv.innerHTML = "";
     arr.forEach((val, i) => {
         str = "";
-        str += "<div id='v_" + i + "'class='col' style='height:" + (val + 10) + "px;'>";
-        str += val;
+        str += "<div id='v_" + i + "'class='col' style='height:" + (val + 5) + "px;'>";
+        // str += val;
         str += "</div>";
         visualDiv.innerHTML += str;
     });
 }
 
 function bubbleSort() {
-    let arr = document.querySelector('#arrayVal').value.split(/,/);
+    // let arr = document.querySelector('#arrayVal').value.split(/,/);
+    let size = /mobi/i.test(navigator.userAgent) ? 30 : 60;
+    let arr = new Array(size).fill(0).map(e => Math.floor(Math.random() * 400) + 100)
     arr = arr.map(val => parseInt(val, 10));
     const len = arr.length;
     show(arr);
@@ -25,9 +27,9 @@ function bubbleSort() {
                         arr[j] = arr[j] ^ arr[j + 1];
                         show([...arr]);
                     }
-                }, j * 100);
+                }, j * 40);
             }
-        }, len * i * 100);
+        }, len * i * 40);
     }
 }
 
